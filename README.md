@@ -17,11 +17,17 @@
 </ul>
 <h2>Pages Web </h2>
 <h3>Page d'Accueil</h3>
-
-<h3>Page d'Ajout d'un produit</h3>
-<h3>Page des Produits</h3>
-<h3>Page de Page Contacts</h3>
-<h3>Page de connexion </h3>
+<img src="captures/acceuil.PNG">
 <h3>Page d’inscription </h3>
+<img src="captures/signUp.PNG">
+<h3>Page de connexion </h3>
+<img src="captures/signIn.PNG">
+<h3>Page d'Ajout d'un produit</h3>
+<img src="captures/acceuil.PNG">
+<h3>Page des Produits</h3>
+<img src="captures/produits.PNG">
+<h3>Page de Page Contacts</h3>
+<img src="captures/modifierProduit.PNG">
+
 
 

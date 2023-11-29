@@ -62,7 +62,8 @@ export function ProductEditForm() {
 
                     <div className="mb-3">
                         <label htmlFor="categorie">Categorie</label>
-                        <select value={selectedCat} onChange={(e) => setSelectedCat(e.target.value)}
+                        <select value={selectedCat}
+                            onChange={(e) => setSelectedCat(e.target.value)}
                             className='form-control'
                             style={{ width: '100%', borderRadius: '10px', borderColor: '#540d72' }}
                         >
