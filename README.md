@@ -26,7 +26,7 @@
 <img src="captures/acceuil.PNG">
 <h3>Page des Produits</h3>
 <img src="captures/produits.PNG">
-<h3>Page de Page Contacts</h3>
+<h3>Page de Contacts</h3>
 <img src="captures/modifierProduit.PNG">
 
 
