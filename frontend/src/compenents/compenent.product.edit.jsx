@@ -46,7 +46,7 @@ export function ProductEditForm() {
 
     return (
         <>
-            <h1 className="text-left mb-4" style={{ textTransform: 'uppercase' }}>Modifier produit</h1>
+            <h1 className="text-left mb-4" style={{ textTransform: 'uppercase' }}>Modifier un produit</h1>
 
             <div className="container mt-2">
                 <form onSubmit={handleForm} style={{ maxWidth: '700px', margin: '0 auto', border: '2px solid #540d72', borderRadius: '10px', padding: '20px' }}>

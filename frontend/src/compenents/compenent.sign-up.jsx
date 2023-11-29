@@ -55,7 +55,7 @@ export function SignUpForm() {
                     id="name"
                     className='mb-4 form-control'
                     placeholder='Nom'
-                    type='text'
+                    type='email'
                     name="name"
                     style={{ borderRadius: '10px', border: '1px solid #540d72' }}
                 />
