@@ -47,11 +47,13 @@ Ce projet suit une architecture modulaire avec une séparation claire des préoc
 <h3>Page de connexion </h3>
 <img src="captures/signIn.PNG">
 <h3>Page d'Ajout d'un produit</h3>
-<img src="captures/acceuil.PNG">
+<img src="captures/ajouter.PNG">
 <h3>Page des Produits</h3>
 <img src="captures/produits.PNG">
-<h3>Page de Contacts</h3>
+<h3>Page de modification d'un produit</h3>
 <img src="captures/modifierProduit.PNG">
+<h3>Page de Contacts</h3>
+<img src="captures/contact.PNG">
 <h2>Base de données </h2>
 <img src="captures/db.PNG">
 
