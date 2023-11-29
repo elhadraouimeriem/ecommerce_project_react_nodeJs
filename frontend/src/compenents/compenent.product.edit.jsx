@@ -1,28 +1,46 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { getProductByID, updateProduct } from "../services/product.services";
+import { getAllCategories } from "../services/categorie.services";
 
 export function ProductEditForm() {
     const [name, setName] = useState("");
     const [price, setPrice] = useState(0);
+    const [selectedCat, setSelectedCat] = useState('');
+    const [categories, setCategories] = useState([]);
     const navigate = useNavigate();
-    const { id } = useParams(); // Utilisez 'useParams' au lieu de 'useParam'
+    const { id } = useParams();
 
     useEffect(() => {
-        fetchProducts();
+        fetchProduct();
+        fetchCategories();
     }, []);
 
-    async function fetchProducts() {
-        const response = await getProductByID(id);
-        const p = response.data;
-        setName(p.name);
-        setPrice(p.price);
+    async function fetchProduct() {
+        try {
+            const response = await getProductByID(id);
+            const p = response.data;
+            setName(p.name);
+            setPrice(p.price);
+            setSelectedCat(p.category._id); // Set the selected category ID
+        } catch (error) {
+            console.error("Error fetching product:", error);
+        }
     }
 
-    function handleForm(event) {
+    async function fetchCategories() {
+        try {
+            const res = await getAllCategories();
+            setCategories(res.data);
+        } catch (error) {
+            console.error("Error fetching categories:", error);
+        }
+    }
+
+    async function handleForm(event) {
         event.preventDefault();
-        const updatedProduct = { "_id": id, "name": name, "price": price };
-        updateProduct(updatedProduct);
+        const updatedProduct = { "_id": id, "name": name, "price": price, "category": selectedCat };
+        await updateProduct(updatedProduct);
         navigate("/products");
     }
 
@@ -40,6 +58,20 @@ export function ProductEditForm() {
                     <div className="mb-3">
                         <label htmlFor="price">Prix</label>
                         <input type="text" id="price" value={price} onChange={(e) => setPrice(e.target.value)} className='form-control' style={{ width: '100%', borderRadius: '10px', borderColor: '#540d72' }} />
+                    </div>
+
+                    <div className="mb-3">
+                        <label htmlFor="categorie">Categorie</label>
+                        <select value={selectedCat} onChange={(e) => setSelectedCat(e.target.value)}
+                            className='form-control'
+                            style={{ width: '100%', borderRadius: '10px', borderColor: '#540d72' }}
+                        >
+                            {categories.map((category) => (
+                                <option key={category._id} value={category._id}>
+                                    {category.name}
+                                </option>
+                            ))}
+                        </select>
                     </div>
 
                     <button type="submit" className="btn btn-primary" style={{ borderRadius: '20px', background: '#540d72', border: '1px solid #540d72' }}>

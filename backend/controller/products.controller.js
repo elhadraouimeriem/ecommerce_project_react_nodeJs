@@ -2,13 +2,12 @@ const Product = require("../models/Product");
 
 async function getAllProducts(req, res) {
     try {
-        const products = await Product.find();
+        const products = await Product.find().populate("category");
         res.status(200).json(products);
     } catch (error) {
         res.status(500).send("Erreur dans le serveur");
     }
 }
-
 async function getProductById(req, res) {
     const idP = req.params.id;
     try {

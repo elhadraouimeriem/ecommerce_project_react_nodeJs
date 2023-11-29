@@ -32,7 +32,9 @@ export function ProductList() {
           <tr>
             <th>name</th>
             <th>Price</th>
+            <th>Categorie</th>
             <th>Action</th>
+
           </tr>
         </thead>
         <tbody>
@@ -40,6 +42,7 @@ export function ProductList() {
             <tr key={index}>
               <td>{product.name}</td>
               <td>{product.price}</td>
+              <td>{product.category.name}</td>
               <td>
                 <button
                   onClick={() => deleteProduct(product._id)}

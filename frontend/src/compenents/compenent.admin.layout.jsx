@@ -7,11 +7,14 @@ export function AdminLayout(){
             <div className="container-fluid">
             <ul className="navbar-nav">
                         <li className="nav-item">
-                            <NavLink className="nav-link" to={"/home"}>Home
+                            <NavLink className="nav-link" to={"/home"}>Acceuil
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to={"/products"}>Products</NavLink>
+                            <NavLink className="nav-link" to={"/products"}>Produits</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link"to={"/categories"}> Categories</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link"to={"/contacts"}>Contacts </NavLink>

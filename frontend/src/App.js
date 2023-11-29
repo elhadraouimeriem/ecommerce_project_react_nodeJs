@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { ProductList } from './compenents/compenent.product.list';
-import { ProductAddForm } from './compenents/compenent.product.add';
+import { ProductNew } from './compenents/compenent.product.new';
 import { ContactForm } from './compenents/compenent.contacts';
 import{Routes,Route}from 'react-router-dom';
 import { AdminLayout } from './compenents/compenent.admin.layout';
@@ -14,13 +14,14 @@ function App() {
     <Routes>
       <Route path="/" element={<AdminLayout/>}>
       <Route path='products' element={<ProductList/>}/>
-      <Route path='products/new' element={<ProductAddForm />}/>
+      <Route path='products/new' element={<ProductNew />}/>
       <Route path='contacts' element={<ContactForm/>}/>
       <Route path='home' element={<Home/>}/>
       <Route path='connexion' element={<ConnexionForm/>}/>
       
       <Route path='sign-up' element={<SignUpForm/>}/>
       <Route path='product/edit/:id' element={<ProductEditForm/>}/>
+
 
 
       </Route>
